@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
+import LandingPage from "./views/LandingPage/LandingPage";
 
-const Home = () => {
-return <div>React Application</div>
-}
+const Home = () => <LandingPage />;
 
-export default Home
+export default Home;
