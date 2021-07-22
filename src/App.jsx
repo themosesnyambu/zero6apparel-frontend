@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 
 import LandingPage from "./components/views/LandingPage/LandingPage";
@@ -8,12 +8,12 @@ import store from "./redux/store";
 
 const App = () => (
   <Provider store={store}>
-    <Router>
+    <BrowserRouter>
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route component={NotFound} />
       </Switch>
-    </Router>
+    </BrowserRouter>
   </Provider>
 );
 
