@@ -5,7 +5,7 @@ import "./releaseCard.scss";
 
 const ReleaseCard = ({ collectionName, itemName, price, thumbnail }) => (
   <>
-    <Link className="article-section" to="*">
+    <Link to="*">
       <div className="release-card">
         <img src={thumbnail} alt="release cover" />
         <div className="details">
