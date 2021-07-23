@@ -4,13 +4,14 @@ import { Provider } from "react-redux";
 
 import LandingPage from "./components/views/LandingPage/LandingPage";
 import NotFound from "./components/views/notfound/NotFound";
+import ContainerWrapper from "./components/common/hoc/ContainerWrapper"
 import store from "./redux/store";
 
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={LandingPage} />
+        <ContainerWrapper exact path="/" component={LandingPage} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
