@@ -1,5 +1,6 @@
 import React, {Fragment} from "react";
 import f from '../../../../assets/fly-bg.jpg';
+import './footer.scss';
 
 export default () =>(
     <>
@@ -8,11 +9,11 @@ export default () =>(
             Collections
         </div>
         <div className="more-about">
-            <div>
+            <div className="tile">
                 <img src={f} alt="blog"/>
                 <h3>BLOG</h3>
             </div>
-            <div>
+            <div className="tile">
                 <img src={f} alt="blog"/>
                 <h3>NEWSLETTER</h3>
             </div>

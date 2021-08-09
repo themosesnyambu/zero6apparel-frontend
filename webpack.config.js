@@ -1,7 +1,9 @@
 const path = require("path");
+require("babel-core/register");
+require("babel-polyfill");
 
 module.exports = {
-  entry: path.resolve(__dirname, "./src/index.js"),
+  entry: [path.resolve(__dirname, "./src/index.js"), 'babel-polyfill'],
   module: {
     rules: [
       {

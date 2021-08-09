@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Toastr from "toastr";
 import App from "./App";
-import "../node_modules/toastr/build/toastr.css";
 
 Toastr.options = {
   closeButton: true,

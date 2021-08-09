@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const NewReleases =()=>(
-    <>
-    New Releases
-    </>
+const NewReleases = () => (
+  <>New Releases</>
 );
 
 export default NewReleases;
