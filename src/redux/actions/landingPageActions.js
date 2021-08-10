@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable import/prefer-default-export */
 import Toastr from 'toastr';
 import API_SERVICE from '../../../utils/API';
@@ -65,8 +66,8 @@ export const getReleasesByCategory = (tag, tags) => async (dispatch) => {
 
 export const getNewReleases = () => async (dispatch) => {
   try {
-    const response = await API_SERVICE.get('/releases/new');
-    const { newReleases } = response.data;
+    const response = await API_SERVICE.get('/releases');
+    const newReleases  = response.data;
     dispatch(setNewReleases(newReleases));
   } catch (error) {
     const { data: { errors } } = error.response;
