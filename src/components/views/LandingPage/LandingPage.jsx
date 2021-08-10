@@ -19,6 +19,7 @@ const LandingPage = () => (
       </div>
       <div className="new-releases">
         <h2>New Releases</h2>
+        <h2>View All</h2>
         <hr />
         <NewReleases />
         <hr />
