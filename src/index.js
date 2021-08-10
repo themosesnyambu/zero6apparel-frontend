@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Toastr from "toastr";
 import App from "./App";
+import "./index.scss";
 
 Toastr.options = {
   closeButton: true,

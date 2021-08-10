@@ -2,8 +2,9 @@
 /* eslint-disable no-console */
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ReleaseCard from "../../releaseCard/releaseCard"
+import ReleaseCard from "../../releaseCard/releaseCard";
 import { getNewReleases } from "../../../../redux/actions/landingPageActions";
+import "./newrelease.scss";
 
 const NewReleases = () => {
   const releases = useSelector((state) => state.release.newReleases);
@@ -19,11 +20,12 @@ const NewReleases = () => {
     dispatch(getData());
   }, []);
 
-  
   if (releases)
     return (
-      <div>
-        {releases.map((release) => <ReleaseCard release={release} key={release._id} /> )}
+      <div className="new-release">
+        {releases.map((release) => 
+          <ReleaseCard release={release} key={release._id} />
+        )}
       </div>
     );
 

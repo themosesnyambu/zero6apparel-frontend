@@ -1,0 +1,27 @@
+.release-card {
+  margin-top: 50px;
+  .cover-photo {
+    width: 100%;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 450px;
+      // max-height: 100%;
+    }
+  }
+
+  .details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .price-header {
+      text-align: right;
+    }
+  }
+}
+
+// img{
+//     position: relative;
+//     max-height: 80%;
+//     max-width: 400px;
+// }
