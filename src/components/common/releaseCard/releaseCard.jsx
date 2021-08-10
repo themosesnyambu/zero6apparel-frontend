@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./releaseCard.scss";
 
-const ReleaseCard = ({ collectionName, itemName, price, thumbnail }) => (
+const ReleaseCard = ({...props}) => (
   <>
     <Link to="*">
       <div className="release-card">
-        <img src={thumbnail} alt="release cover" />
+      
+        <img src={props.release.photos[0]} alt="release cover" />)
         <div className="details">
-          <h3>{collectionName}</h3>
-          <h3>{itemName}</h3>
-          <h4>{price}</h4>
+          {props.release.name}
+          <h3>{props.release.collectionStyle}</h3>
+          <h4>{props.release.price}</h4>
         </div>
       </div>
     </Link>
@@ -19,10 +20,12 @@ const ReleaseCard = ({ collectionName, itemName, price, thumbnail }) => (
 );
 
 ReleaseCard.propTypes = {
-  thumbnail: PropTypes.string.isRequired,
-  itemName: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  collectionName: PropTypes.number.isRequired,
+  release : PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    collectionStyle: PropTypes.string.isRequired,
+    photos: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
 };
 
 export default ReleaseCard;
