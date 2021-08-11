@@ -20,7 +20,7 @@ import {
         return {
           ...state,
           loading: payload.loading,
-          articles: payload.releases,
+          releases: payload.releases,
         };
       case RELEASE_LOADING:
         return {
@@ -31,7 +31,7 @@ import {
         return {
           ...state,
           loading: payload.loading,
-          article: payload.release,
+          releases: payload.release,
         };
       case GET_RELEASE_ERROR:
         return {

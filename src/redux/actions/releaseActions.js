@@ -1,5 +1,5 @@
 import API_SERVICE from '../../../utils/API';
-import isEmpty from '../../../utils/isEmpty';
+// import isEmpty from '../../../utils/isEmpty';
 
 import {
     GET_RELEASE,
@@ -46,13 +46,7 @@ import {
     dispatch(releaseLoading());
     try {
       const fetchedRelease = await API_SERVICE.get(`/releases/${slug}`);
-      const { tagsList } = fetchedRelease.data.article;
-      if (!isEmpty(tagsList)) {
-        const randomTag = tagsList[Math.floor(Math.random() * tagsList.length)];
-        const relatedReleases = await API_SERVICE.get(`/search?keyword=${randomTag}`);
-        fetchedRelease.data.article.relatedArticles = relatedReleases.data.matches.tags;
-      }
-      dispatch(getSingleRelease(fetchedRelease.data.article));
+      dispatch(getSingleRelease(fetchedRelease.data));
     } catch (error) {
       dispatch(releaseError(error.response.data.errors));
     }
