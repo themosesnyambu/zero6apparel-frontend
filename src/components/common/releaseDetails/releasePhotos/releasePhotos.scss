@@ -1,0 +1,15 @@
+   .product-photos{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+   
+   .product-photo {
+      width: 100%;
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+}
