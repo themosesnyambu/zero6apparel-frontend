@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
-
 import LandingPage from "./components/views/LandingPage/LandingPage";
 import NotFound from "./components/views/notfound/NotFound";
 import ReleaseDetails from "./components/views/releaseDetails/releaseDetails";
 import ContainerWrapper from "./components/common/hoc/ContainerWrapper";
+import CollectionContainer from "./components/common/hoc/collectionContainer";
 import store from "./redux/store";
 
 const App = () => (
@@ -18,6 +18,7 @@ const App = () => (
           component={ReleaseDetails}
         />
         <ContainerWrapper exact path="/" component={LandingPage} />
+        <ContainerWrapper exact path="/collections" component={CollectionContainer} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>

@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
@@ -8,7 +7,6 @@ import ReleasePhotos from "../../common/releaseDetails/releasePhotos/releasePhot
 import "./releaseDetails.scss";
 
 const ReleaseDetails = ({ match }) => {
-  // eslint-disable-next-line no-unused-vars
   const release = useSelector((state) => state.singleRelease.releases);
   const dispatch = useDispatch();
 

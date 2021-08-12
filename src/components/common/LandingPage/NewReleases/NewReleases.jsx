@@ -23,7 +23,7 @@ const NewReleases = () => {
   if (releases)
     return (
       <div className="new-release">
-        {releases.map((release) => 
+        {releases.slice(0,2).map((release) => 
           <ReleaseCard release={release} key={release._id} />
         )}
       </div>

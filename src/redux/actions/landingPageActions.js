@@ -77,3 +77,19 @@ export const getNewReleases = () => async (dispatch) => {
     Toastr.error(error);
   }
 };
+
+
+export const getReleases = () => async (dispatch) => {
+  try {
+  /* istanbul ignore next-line */
+    const url = `/releases`;
+    const res = await API_SERVICE.get(url);
+    dispatch(setReleases(res.data));
+  } catch (error) {
+    const { data: { errors } } = error.response;
+    const message = Object.values(errors)[0];
+    dispatch(setError(message));
+    Toastr.error(message);
+    Toastr.error(error);
+  }
+};
