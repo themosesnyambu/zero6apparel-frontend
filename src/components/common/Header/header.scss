@@ -1,3 +1,40 @@
-.nav-extended{
-    background-color: #fff;
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+
+  .top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+    padding: 0 5%;
+  }
+
+  .bottom {
+    padding: 0 5%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .routes {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .profile {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .profile-item {
+        margin-left: 20px;
+      }
+    }
+  }
 }

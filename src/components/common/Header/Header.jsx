@@ -1,49 +1,57 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import {useSelector} from 'react-redux';
+import { useSelector } from "react-redux";
+import search from "../../../../assets/search1.png";
+import person from "../../../../assets/person1.png";
+import bag from "../../../../assets/bag1.png";
 import "./header.scss";
 
-
 export default () => {
-  const cart = useSelector((state)=> state.bag.cart);
-return(
-<>
-  <h1><Link to="/bag">{cart.length}</Link></h1>
-    <nav className="nav-extended">
-      <div className="nav-wrapper">
-        <Link to="/">
-          <span className="brand-logo">
-            <img src="" alt="logo" />
-          </span>
-        </Link>
-        <a href="#!" data-target="mobile-demo" className="sidenav-trigger">
-          <i className="material-icons">menu</i>
-        </a>
-        <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li>
-            <Link to="/">HOME</Link>
-          </li>
-          <li>
-            <Link to="/collections">Collections</Link>
-          </li>
-          <li>
-            <Link to="*">Shop</Link>
-          </li>
-          <li>
-            <Link to="*">New Releases</Link>
-          </li>
-          <li>
-            <Link className="waves-effect waves-light btn" to="/signin">
-              sign in
+  const cart = useSelector((state) => state.bag.cart);
+  return (
+    <>
+      <div className="navbar">
+        <div className="top">join us</div>
+        <div className="bottom">
+          <div className="routes">
+            <div>
+              <Link to="/collections">Collections</Link>
+            </div>
+            <div>
+              <Link to="*">Shop</Link>
+            </div>
+            <div>
+              <Link to="*">New Releases</Link>
+            </div>
+          </div>
+          <div className="logo">
+            <Link to="/">
+              <span className="brand-logo">
+                <img src="" alt="logo" />
+              </span>
             </Link>
-          </li>
-          <li>
-            <Link className="waves-effect waves-light btn" to="/signup">
-              sign up
-            </Link>
-          </li>
-        </ul>
+          </div>
+          <div className="profile">
+            <div className="profile-item">
+              <Link to="/">
+                <img src={search} alt="my profile" />
+              </Link>
+            </div>
+            <div className="profile-item">
+              <Link to="/profile">
+              <img src={person} alt="my profile" />
+              </Link>
+            </div>
+            <div className="profile-item">
+              <Link to="/bag">
+                
+              <img src={bag} alt="my profile" />
+                {cart.length}
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
-  </>
-)};
+    </>
+  );
+};
