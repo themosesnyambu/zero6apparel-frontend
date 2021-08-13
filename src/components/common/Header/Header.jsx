@@ -1,9 +1,14 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import {useSelector} from 'react-redux';
 import "./header.scss";
 
-export default () => (
-  <>
+
+export default () => {
+  const cart = useSelector((state)=> state.bag.cart);
+return(
+<>
+  <h1><Link to="/bag">{cart.length}</Link></h1>
     <nav className="nav-extended">
       <div className="nav-wrapper">
         <Link to="/">
@@ -41,4 +46,4 @@ export default () => (
       </div>
     </nav>
   </>
-);
+)};

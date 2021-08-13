@@ -16,7 +16,7 @@ export default (state = initialState, action) => {
     case ADD_TO_BAG:
       const itemToAdd = releases[0].find(({ _id }) => _id === id);
       const isInCart = state.cart.find(
-        ({ _id, size }) => _id === id && size === actionSize
+        ({ _id, size }) => (_id === id && size === actionSize)
       );
       if (isInCart) {
         itemToAdd.quantity += 1;
@@ -25,6 +25,7 @@ export default (state = initialState, action) => {
         };
       }
       itemToAdd.quantity = 1;
+      itemToAdd.size = actionSize;
       return {
         ...state,
         cart: [...state.cart, itemToAdd],

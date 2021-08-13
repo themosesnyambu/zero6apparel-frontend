@@ -6,6 +6,7 @@ import NotFound from "./components/views/notfound/NotFound";
 import ReleaseDetails from "./components/views/releaseDetails/releaseDetails";
 import ContainerWrapper from "./components/common/hoc/ContainerWrapper";
 import CollectionContainer from "./components/common/hoc/collectionContainer";
+import Bag from "./components/views/bag/bag";
 import store from "./redux/store";
 
 const App = () => (
@@ -18,8 +19,9 @@ const App = () => (
           component={ReleaseDetails}
         />
         <ContainerWrapper exact path="/" component={LandingPage} />
+        <ContainerWrapper exact path="/bag" component={Bag} />
         <ContainerWrapper exact path="/collections" component={CollectionContainer} />
-        <Route component={NotFound} />
+        <Route component={NotFound} /> 
       </Switch>
     </BrowserRouter>
   </Provider>
