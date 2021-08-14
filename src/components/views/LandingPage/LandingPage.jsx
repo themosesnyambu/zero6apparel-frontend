@@ -20,9 +20,7 @@ const LandingPage = () => (
       <div className="new-releases">
         <h2>New Releases</h2>
         <h2>View All</h2>
-        <hr />
-        <NewReleases />
-        <hr />
+        <NewReleases />        
       </div>
     </div>
   </>

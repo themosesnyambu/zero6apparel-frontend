@@ -1,18 +1,40 @@
-.footer{
-    height: 400px;
-    width: 100vw;
-    .more-about{
-        width: 80%;
-        margin: auto;
+@use '../../../scss/color';
+
+.footer {
+  width: 100vw;
+  .newsletter {
+    padding: 20px;
+    color: color.$black-shade;
+    background-color: color.$white;
+    text-align: center;
+  }
+  .more-about {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .pages{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        
-        .tile {
-            
-            img{
-                width: 300px;
-                max-height: 300px;
-            }
-        }
+        grid-template-columns: 1fr 1fr;        
     }
+
+    .subscriptions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 10px;
+
+      .tile {
+          
+        .name {
+          color: black;
+          background-color: color.$brown;
+        }
+        img {
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
