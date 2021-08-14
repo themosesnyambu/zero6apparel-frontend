@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import search from "../../../../assets/search1.png";
-import person from "../../../../assets/person1.png";
-import bag from "../../../../assets/bag1.png";
+import search from "../../../../assets/icons/search1.png";
+import person from "../../../../assets/icons/person1.png";
+import bag from "../../../../assets/icons/bag1.png";
 import "./header.scss";
 
 export default () => {

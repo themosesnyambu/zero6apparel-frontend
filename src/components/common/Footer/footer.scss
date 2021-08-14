@@ -7,34 +7,55 @@
     color: color.$black-shade;
     background-color: color.$white;
     text-align: center;
+    .button{
+      margin-left: 20px;
+      padding: 10px 15px;
+    }
   }
   .more-about {
     width: 90%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 30px;
 
-    .pages{
-        display: grid;
-        grid-template-columns: 1fr 1fr;        
+    .pages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
 
     .subscriptions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 10px;
+      .tiles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
 
-      .tile {
-          
-        .name {
-          color: black;
-          background-color: color.$brown;
-        }
-        img {
-          object-fit: cover;
-          width: 100%;
+        .tile {
+          .name {
+            color: black;
+            background-color: color.$brown;
+          }
+          img {
+            object-fit: cover;
+            width: 100%;
+          }
         }
       }
+    }
+  }
+  .socials {
+    margin-top: 30px;
+    float: right;
+  }
+  .legals{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+
+    img{
+      height: 16px;
     }
   }
 }

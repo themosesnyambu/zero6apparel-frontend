@@ -11,8 +11,8 @@ const LandingPage = () => (
           
           <p>To be BOLD is to be FREE</p>
           <p>Stay fly with the new w!ngs edition</p>
-          <button type="button" className="primary-button rounded primary-cta">shop now</button>
-          <button type="button" className="secondary-cta rounded">learn more</button>
+          <button type="button" className="primary-button button rounded">shop now</button>
+          <button type="button" className="white-button button rounded">learn more</button>
         </div>
 
         <div />

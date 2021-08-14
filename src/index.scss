@@ -26,6 +26,14 @@ body {
   }
 }
 
+.container{
+  padding-top: 100px;
+}
+
+.button{
+  padding: 10px 15px;
+  margin: 15px;
+}
 .primary-button {
   color: #000;
   background-color: color.$primary-yellow;
@@ -48,4 +56,8 @@ body {
 
 .rounded {
   border-radius: 30px;
+}
+
+.primary-header{
+  color: color.$primary-yellow;
 }

@@ -3,6 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { addToBag } from "../../../../redux/actions/bagActions";
+import star from "../../../../../assets/icons/star1.png";
 import "./releasedescription.scss";
 
 const ReleaseDescription = ({ ...props }) => {
@@ -60,13 +61,15 @@ const ReleaseDescription = ({ ...props }) => {
       <p>Color shown: {props.release.color}</p>
       <p>Style: {props.release.collectionStyle}</p>
       <hr />
-      Reviews
       <div className="favourite button-group">
-        <button type="button">1</button>
-        <button type="button">1</button>
-        <button type="button">1</button>
-        <button type="button">1</button>
-        <button type="button">1</button>
+        Reviews
+        <div>
+          <img src={star} alt="" />
+          <img src={star} alt="" />
+          <img src={star} alt="" />
+          <img src={star} alt="" />
+          <img src={star} alt="" />
+        </div>
       </div>
       <hr />
     </div>
