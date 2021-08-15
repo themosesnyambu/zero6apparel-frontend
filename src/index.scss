@@ -1,5 +1,6 @@
 @use "./scss/color.scss";
 @use "./scss/fonts";
+@use './scss/buttons';
 
 body {
   margin: 0;
@@ -26,38 +27,9 @@ body {
   }
 }
 
-.container{
+.container {
   padding-top: 100px;
 }
-
-.button{
-  padding: 10px 15px;
-  margin: 15px;
-}
-.primary-button {
-  color: #000;
-  background-color: color.$primary-yellow;
-  border: none;
-  outline: none;
-}
-
-.black-button {
-  color: #fff;
-  border: solid #fff 1px;
-  background-color: #000;
-}
-
-.white-button {
-  color: #000;
-  border: none;
-  outline: none;
-  background-color: #fff;
-}
-
-.rounded {
-  border-radius: 30px;
-}
-
-.primary-header{
+.primary-header {
   color: color.$primary-yellow;
 }

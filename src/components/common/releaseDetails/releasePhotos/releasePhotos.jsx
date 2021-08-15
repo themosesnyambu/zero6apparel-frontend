@@ -5,8 +5,8 @@ import "./releasePhotos.scss";
 
 const getPhoto = (arr) => {
   const photo = arr.slice(0, 4).map((item) => (
-    <div className="product-photo">
-      <img key={Math.floor(Math.random() * 1000)} src={item} alt="" />
+    <div key={Math.floor(Math.random() * 1000)} className="product-photo">
+      <img src={item} alt="" />
     </div>
   ));
   return photo;
