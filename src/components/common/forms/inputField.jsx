@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({
+const InputField = ({
   type, name, value, ...otherprops
 }) => (
   <input
@@ -13,9 +13,9 @@ const Input = ({
   />
 );
 
-Input.propTypes = {
+InputField.propTypes = {
   type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
 };
-export default Input;
+export default InputField;

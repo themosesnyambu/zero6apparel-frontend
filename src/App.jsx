@@ -9,12 +9,14 @@ import CollectionContainer from "./components/common/hoc/collectionContainer";
 import Bag from "./components/views/bag/bag";
 import store from "./redux/store";
 import SignUp from "./components/views/auth/signup/signUp";
+import SignIn from "./components/views/auth/signin/signIn";
 
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
       <Switch>
         <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/signin" component={SignIn} />
         <ContainerWrapper
           exact
           path="/releases/:id"
