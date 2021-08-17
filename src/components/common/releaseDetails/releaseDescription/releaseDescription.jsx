@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { addToBag } from "../../../../redux/actions/bagActions";
@@ -8,9 +8,16 @@ import "./releasedescription.scss";
 
 const ReleaseDescription = ({ ...props }) => {
   const dispatch = useDispatch();
+  const [size, setSize] = useState("");
+  const [error, setError] = useState("");
 
   const addToCartFunc = () => {
-    dispatch(addToBag(props.release._id, "M"));
+    if (size.length === 0) {
+      setError("Please select size");
+    } else {
+      setError("Item added successfully");
+      dispatch(addToBag(props.release._id, size));
+    }
   };
   return (
     <div className="product-description">
@@ -29,19 +36,39 @@ const ReleaseDescription = ({ ...props }) => {
       </div>
       Select Size <br />
       <div className="sizes button-group">
-        <button className="black-button" type="button">
+        <button
+          onClick={() => setSize("S")}
+          className="black-button"
+          type="button"
+        >
           S
         </button>
-        <button className="black-button" type="button">
+        <button
+          onClick={() => setSize("M")}
+          className="black-button"
+          type="button"
+        >
           M
         </button>
-        <button className="black-button" type="button">
+        <button
+          onClick={() => setSize("L")}
+          className="black-button"
+          type="button"
+        >
           L
         </button>
-        <button className="black-button" type="button">
+        <button
+          onClick={() => setSize("XL")}
+          className="black-button"
+          type="button"
+        >
           XL
         </button>
-        <button className="black-button" type="button">
+        <button
+          onClick={() => setSize("XXL")}
+          className="black-button"
+          type="button"
+        >
           XXL
         </button>
       </div>

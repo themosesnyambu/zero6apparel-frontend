@@ -11,7 +11,7 @@ export default () => {
   return (
     <>
       <div className="navbar">
-        <div className="top">join us</div>
+        <div className="top"><Link to="/signup">join us</Link></div>
         <div className="bottom">
           <div className="routes">
             <div>
