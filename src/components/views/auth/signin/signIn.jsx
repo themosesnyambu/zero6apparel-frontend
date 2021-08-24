@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import PropTypes from "prop-types";
 import { signInAccount, getToken } from "../../../../redux/actions/authActions";
 import InputField from "../../../common/forms/inputField";
+import './signin.scss';
 
 const SignIn = (props) => {
   const [values, setValues] = useState({
@@ -73,13 +74,12 @@ const SignIn = (props) => {
       </div>
       <div className="input-field">
         <button
-          className="bttn bttn-primary btn-block bttn-large"
+          className="button primary-button"
           type="submit"
           value="Sign In"
           disabled={loading}
         >
           {loading ? "Loading..." : "Sign In"}
-          <i className="arrow-forward material-icons">arrow_forward</i>
         </button>
       </div>
     </form>

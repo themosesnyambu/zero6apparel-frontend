@@ -40,10 +40,9 @@ export const signInAccount = (userData, history, accountVerificationToken) => as
     let userToken;
     if (userData !== null) {
       const logInUser = await API_SERVICE.post('/auth/signin', userData);
-      const { token } = logInUser.data.user;
+      const { token } = logInUser.data;
       userToken = token;
-    } else userToken = accountVerificationToken;
-
+    } 
     localStorage.setItem('jwtToken', userToken);
     const user = jwtDecode(userToken);
     const successMessage = accountVerificationToken ? 'Your account is successfully verified' : 'User successfully logged in';
