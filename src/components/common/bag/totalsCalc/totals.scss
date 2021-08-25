@@ -1,0 +1,8 @@
+.totals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .values {
+    text-align: right;
+  }
+}

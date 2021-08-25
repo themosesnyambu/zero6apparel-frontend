@@ -1,0 +1,11 @@
+.info{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    
+
+    .bag{
+        display: grid;
+        grid-template-columns: 1fr;
+        border-left: solid #fff 1px;
+    }
+}

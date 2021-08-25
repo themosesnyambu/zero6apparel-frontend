@@ -1,0 +1,32 @@
+.product {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    img {
+      object-fit: cover;
+      width: 150px;
+      max-height: 150px;
+    }
+
+    .actions {
+      .release-name {
+        font-family: "poppinsmedium";
+        font-size: 20px;
+        margin: 0;
+      }
+      .release-style {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .release-size{
+        margin-top: 20px;
+      }
+      .button-group{
+        margin-top: 20px;
+      }
+    }
+    .release-price {
+      float: right;
+    }
+  }
