@@ -10,6 +10,7 @@ import Bag from "./components/views/bag/bag";
 import store from "./redux/store";
 import SignUp from "./components/views/auth/signup/signUp";
 import SignIn from "./components/views/auth/signin/signIn";
+import Information from "./components/views/checkout/information/Information";
 // import setUser from '../utils/setUser';
 
 // setUser();
@@ -27,6 +28,7 @@ const App = () => (
         />
         <ContainerWrapper exact path="/" component={LandingPage} />
         <ContainerWrapper exact path="/bag" component={Bag} />
+        <ContainerWrapper exact path="/checkout/information" component={Information} />
         <ContainerWrapper
           exact
           path="/collections"

@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import isEmpty from "../../../../utils/isEmpty";
 import NewReleases from "../../common/LandingPage/NewReleases/NewReleases";
 import "./bag.scss";
@@ -71,9 +72,11 @@ const Bag = () => {
             <p className="values">{totalCost}</p>
           </div>
           <hr />
+          <Link to="/checkout/information">
           <button className="checkout rounded primary-button" type="button">
             checkout
           </button>
+          </Link> 
         </div>
       </div>
     );
