@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import { fetchUserProfile } from "../../../redux/actions/profileActions";
+import ProfileCard from "../../common/profile/profileCard";
 
 const Profile = ({ match }) => {
   const user = useSelector((state) => state.auth.user);
-//   const profile = useSelector((state) => state.profile);
+  const profile = useSelector((state) => state.profile);
 
   useEffect(() => {
     const getProfile = async () => {
@@ -15,7 +16,11 @@ const Profile = ({ match }) => {
     getProfile();
   }, [match, fetchUserProfile, user]);
 
-  return <></>;
+  return (
+    <>
+      <ProfileCard profile={profile} />
+    </>
+  );
 };
 
 Profile.propTypes = {
