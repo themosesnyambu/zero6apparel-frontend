@@ -1,19 +1,22 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { fetchUserProfile } from "../../../redux/actions/profileActions";
 import ProfileCard from "../../common/profile/profileCard";
 
 const Profile = ({ match }) => {
+  const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
-  const profile = useSelector((state) => state.profile);
+  const profile = useSelector((state) => state.profile.profile);
+
+  function getProfile() {
+    return () => {
+      dispatch(fetchUserProfile(match.params.userId));
+    };
+  }
 
   useEffect(() => {
-    const getProfile = async () => {
-      const { params } = match;
-      await fetchUserProfile(params.userId);
-    };
-    getProfile();
+    dispatch(getProfile());
   }, [match, fetchUserProfile, user]);
 
   return (

@@ -6,6 +6,15 @@ import {
   PROFILE_ERROR,
 } from './types/profileType';
 
+
+export const getProfile = profile => ({
+  type: GET_PROFILE,
+  payload: {
+    loading: false,
+    profile,
+  },
+});
+
 const flattenObject = (obj, prefix = '') => Object.keys(obj).reduce((acc, k) => {
   const pre = prefix.length ? `${prefix}` : '';
   if (typeof obj[k] === 'object' && obj[k] !== null) Object.assign(acc, flattenObject(obj[k], pre + k));
@@ -16,11 +25,11 @@ const flattenObject = (obj, prefix = '') => Object.keys(obj).reduce((acc, k) => 
 export const fetchUserProfile = id => async (dispatch) => {
   dispatch({ type: PROFILE_LOADING, payload: true });
   try {
-    const userProfile = await API_SERVICE.get(`/profiles/${id}`);
+    const userProfile = await API_SERVICE.get(`users/profile/${id}`);
     const profile = flattenObject({
-      ...userProfile.data.profile,
+      ...userProfile.data.data,
     });
-    dispatch({ type: GET_PROFILE, payload: profile });
+    dispatch(getProfile(profile));
   } catch (error) {
     dispatch({ type: PROFILE_ERROR, payload: error.response });
   }

@@ -20,7 +20,7 @@ import {
       case GET_PROFILE:
         return {
           ...state,
-          profile: payload,
+          profile: payload.profile,
           loading: false,
         };
       case PROFILE_ERROR:
