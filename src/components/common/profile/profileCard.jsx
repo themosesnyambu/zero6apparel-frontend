@@ -1,19 +1,12 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-
+import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 
 const ProfileCard = ({ profile }) => (
   <>
     <div className="container profile-view">
-      <div className="row">
-        <div className="col s8 push-s4">
-          <span className="flow-text">
-            <div className="edit--profile">
-              <h2 className="profile-author-name">{profile.firstName} {profile.lastName}</h2>
-            </div>
-          </span>
-        </div>
-      </div>
+      <h2 className="profile-author-name">
+        {profile.firstName} {profile.lastName}
+      </h2>
     </div>
   </>
 );
@@ -32,4 +25,3 @@ ProfileCard.propTypes = {
 };
 
 export default ProfileCard;
-

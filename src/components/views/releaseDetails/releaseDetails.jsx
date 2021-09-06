@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
 import { getReleaseBySlug } from "../../../redux/actions/releaseActions";
-import ReleaseDescription from "../../common/releaseDetails/releaseDescription/releaseDescription";
-import ReleasePhotos from "../../common/releaseDetails/releasePhotos/releasePhotos";
+import ReleaseDescription from "../../common/release/releaseDetails/releaseDescription/releaseDescription";
+import ReleasePhotos from "../../common/release/releaseDetails/releasePhotos/releasePhotos";
 import "./releaseDetails.scss";
 
 const ReleaseDetails = ({ match }) => {

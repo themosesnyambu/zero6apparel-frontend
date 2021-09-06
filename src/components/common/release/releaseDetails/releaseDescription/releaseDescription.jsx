@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
-import { addToBag } from "../../../../redux/actions/bagActions";
-import star from "../../../../../assets/icons/star1.png";
+import { addToBag } from "../../../../../redux/actions/bagActions";
+import star from "../../../../../../assets/icons/star1.png";
 import "./releasedescription.scss";
 
 const ReleaseDescription = ({ ...props }) => {

@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ReleaseCard from "../../releaseCard/releaseCard";
+import ReleaseCard from "../../release/releaseCard/releaseCard";
 import { getNewReleases } from "../../../../redux/actions/landingPageActions";
 import "./newrelease.scss";
 

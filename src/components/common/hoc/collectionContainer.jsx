@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getReleases } from "../../../redux/actions/landingPageActions";
-import ReleaseList from "../releaseList/releaseList";
+import ReleaseList from "../release/releaseList/releaseList";
 import isEmpty from "../../../../utils/isEmpty";
 
 const CollectionContainer = () => {
