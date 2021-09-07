@@ -1,30 +1,32 @@
 .bag {
-  width:85%;
+  width: 85%;
   margin: 40px auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
 
-  .title{
+  .title {
     font-family: "poppinsmedium";
     margin: 20px 0;
     font-size: 20px;
   }
-  p {
-    margin: 0;
-  }
 
-  .products {
-    width: 80%;
-    margin: auto;
+  .checkout {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
   }
+}
 
-  
-  .summary {
-    .checkout{
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      margin-top: 20px;
+@media (max-width: 568px) {
+  .bag {
+    width: 95%;
+    grid-template-columns: 1fr;
+
+    .title {
+      font-family: "poppinsmedium";
+      margin: 5px 0;
+      font-size: 20px;
     }
   }
 }

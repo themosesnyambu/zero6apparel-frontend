@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import InputField from "../../forms/inputField";
+import './informationForm.scss';
 
 const InformationForm = () => {
   const [values, setValues] = useState({

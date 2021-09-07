@@ -5,14 +5,19 @@
 
 body {
   margin: 0;
+  padding: 0;
   width: 100vw;
-  overflow-x: hidden;
   box-sizing: border-box;
   font-family: "poppinsregular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: color.$black-shade;
   color: color.$white;
+
+  .site-wrapper {
+    width: 100vw;
+    overflow-x: hidden;
+  }
 
   h1,
   h2,

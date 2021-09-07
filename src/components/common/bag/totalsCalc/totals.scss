@@ -6,3 +6,14 @@
     text-align: right;
   }
 }
+
+@media (max-width: 568px) {
+  .totals {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+}
