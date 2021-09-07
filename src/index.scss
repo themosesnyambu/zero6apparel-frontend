@@ -34,9 +34,3 @@ body {
 .primary-header {
   color: color.$primary-yellow;
 }
-
-@media only screen and (max-width: 800px) {
-  .primary-header {
-    color: lightblue;
-  }
-}

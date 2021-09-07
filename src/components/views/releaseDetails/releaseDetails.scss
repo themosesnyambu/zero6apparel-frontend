@@ -4,3 +4,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+@media(max-width: 568px){
+    .release-details{
+        grid-template-columns: 1fr;
+    }
+}

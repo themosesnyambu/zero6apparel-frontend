@@ -1,15 +1,23 @@
-   .product-photos{
+.product-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-   
-   .product-photo {
+  .product-photo {
+    width: 100%;
+    img {
+      object-fit: cover;
       width: 100%;
-      img {
-        object-fit: cover;
-        width: 100%;
-      }
     }
+  }
+}
+
+@media (max-width: 568px) {
+  .product-photos {
+    width: 90%;
+    margin: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
 }
