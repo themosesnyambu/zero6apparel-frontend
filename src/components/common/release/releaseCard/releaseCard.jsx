@@ -12,13 +12,13 @@ const ReleaseCard = ({ ...props }) => (
           <img src={props.release.photos[0]} alt="release cover" />
         </div>
         <div className="details">
-          <div>
-            <h4 className="bold">{props.release.name}</h4>
-            <h5>{props.release.collectionStyle}</h5>
+          <div className='name'>
+            <p className="bold">{props.release.name}</p>
+            <p>{props.release.collectionStyle}</p>
           </div>
-          <h4 className="primary-header bold price-header">
+          <p className=" bold price-header primary-header">
             KSH {props.release.price}
-          </h4>
+          </p>
         </div>
       </div>
     </Link>
