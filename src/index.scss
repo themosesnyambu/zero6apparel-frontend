@@ -33,6 +33,12 @@ body {
   }
 }
 
+@media(min-width:568px){
+  body{
+    overflow-x: hidden;
+  }
+}
+
 .container {
   padding-top: 100px;
 }

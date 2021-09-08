@@ -6,6 +6,7 @@ import { logoutAccount } from "../../../redux/actions/authActions";
 import search from "../../../../assets/icons/search1.png";
 import person from "../../../../assets/icons/person1.png";
 import bag from "../../../../assets/icons/bag1.png";
+import menu from "../../../../assets/icons/menu1.png";
 
 const AuthenticatedHeader = ({ history }) => {
   const logoutUser = () => {
@@ -62,6 +63,10 @@ const AuthenticatedHeader = ({ history }) => {
                 {cart.length}
               </Link>
             </div>
+          </div>
+          
+          <div className="nav-menu-btn">
+            <img src={menu} alt="menu-btn" />
           </div>
         </div>
       </div>

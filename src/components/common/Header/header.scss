@@ -49,4 +49,59 @@
       }
     }
   }
+
+  @media(max-width: 568px){
+    .bottom{
+      padding: 0px 5% 0px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .routes, .profile{
+        display: none;
+      }
+      
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .sidenav, .nav-menu-btn {
+    display: none;
+  }
+}
+
+
+.sidenav {
+  position: fixed;
+  top: 5%;
+  height: 90%;
+  width: 85%;
+  background-color: color.$black-shade;
+  z-index: 10002;
+  transition: all 0.5s ease-out;
+
+  .close-menu-btn {
+    text-align: right;
+    margin: 20px;
+  }
+
+  .sidenav-content {
+    margin: 40px 20px;
+    text-align: right;
+    height: 200px;
+
+    div {
+      margin: 10px 0;
+      color: #ffffff;
+    }
+  }
+}
+
+.sidenav-active{
+  right: 0;
+}
+
+.sidenav-inactive{
+  right: -100%;
 }

@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ReleaseCard from "../../release/releaseCard/releaseCard";
-import { getNewReleases } from "../../../../redux/actions/landingPageActions";
+import { getNewReleases, getReleases } from "../../../../redux/actions/landingPageActions";
 import "./newrelease.scss";
 
 const NewReleases = () => {
@@ -12,6 +12,7 @@ const NewReleases = () => {
 
   function getData() {
     return () => {
+      dispatch(getReleases());
       dispatch(getNewReleases());
     };
   }

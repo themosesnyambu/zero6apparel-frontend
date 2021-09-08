@@ -81,10 +81,9 @@ export const getNewReleases = () => async (dispatch) => {
 
 export const getReleases = () => async (dispatch) => {
   try {
-  /* istanbul ignore next-line */
-    const url = `/releases`;
-    const res = await API_SERVICE.get(url);
-    dispatch(setReleases(res.data));
+    const response = await API_SERVICE.get('/releases');
+    const releases  = response.data;
+    dispatch(setReleases(releases));
   } catch (error) {
     const { data: { errors } } = error.response;
     const message = Object.values(errors)[0];
