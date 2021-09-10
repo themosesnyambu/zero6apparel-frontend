@@ -1,12 +1,14 @@
 .info {
+  width: 85%;
+  margin: auto;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 4fr 6fr;
 
   .bag {
     display: grid;
     grid-template-columns: 1fr;
-    border-left: solid #fff 1px;
   }
+
 }
 
 @media (max-width: 568px) {

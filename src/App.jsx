@@ -40,7 +40,7 @@ const App = () => (
           path="/collections"
           component={CollectionContainer}
         />
-        <Route component={NotFound} />
+        <ContainerWrapper component={NotFound} />
       </Switch>
     </BrowserRouter>
   </Provider>
