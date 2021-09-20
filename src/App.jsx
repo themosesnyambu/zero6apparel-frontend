@@ -8,7 +8,6 @@ import ReleaseDetails from "./components/views/releaseDetails/releaseDetails";
 import ContainerWrapper from "./components/common/hoc/ContainerWrapper";
 import CollectionContainer from "./components/common/hoc/collectionContainer";
 import Bag from "./components/views/bag/bag";
-// eslint-disable-next-line import/named
 import {store, persistor} from "./redux/store";
 import SignUp from "./components/views/auth/signup/signUp";
 import SignIn from "./components/views/auth/signin/signIn";

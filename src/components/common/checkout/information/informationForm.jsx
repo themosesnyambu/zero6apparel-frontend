@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import InputField from "../../forms/inputField";
-import './informationForm.scss';
+import "./informationForm.scss";
 
 const InformationForm = () => {
   const [values, setValues] = useState({
@@ -29,8 +30,13 @@ const InformationForm = () => {
     <div>
       <div>
         <form onSubmit={handleSubmit}>
-          Contact information Already havae an account?{" "}
-          <button className='underline-button' type="button">Login</button>
+          Contact information
+          <br /> Already have an account?{" "}
+          <Link to="/signin">
+            <button className="underlined-button" type="button">
+              Login
+            </button>
+          </Link>
           <div className="input-field">
             <InputField
               type="email"
@@ -42,7 +48,7 @@ const InformationForm = () => {
               required
             />
           </div>
-          Shipping Address
+          
           <div className="input-field">
             <InputField
               type="text"
@@ -65,6 +71,7 @@ const InformationForm = () => {
               required
             />
           </div>
+          Shipping Address
           <div className="input-field">
             <InputField
               type="text"
@@ -133,7 +140,7 @@ const InformationForm = () => {
           </div>
           <div className="input-field">
             <button
-              className="button primary-button"
+              className="button primary-button "
               type="submit"
               value="Sign In"
             >
