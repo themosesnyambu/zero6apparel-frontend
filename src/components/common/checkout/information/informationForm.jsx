@@ -30,7 +30,7 @@ const InformationForm = () => {
       <div>
         <form onSubmit={handleSubmit}>
           Contact information Already havae an account?{" "}
-          <button type="button">Login</button>
+          <button className='underline-button' type="button">Login</button>
           <div className="input-field">
             <InputField
               type="email"
